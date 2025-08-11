@@ -1,0 +1,2 @@
+
+DELETE FROM exercises WHERE id >= 2001201 AND id <= 2951201;

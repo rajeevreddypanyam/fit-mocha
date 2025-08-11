@@ -1,0 +1,12 @@
+
+CREATE TABLE workouts (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  notes TEXT,
+  duration_minutes INTEGER,
+  started_at TIMESTAMP,
+  completed_at TIMESTAMP,
+  is_template BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,50 @@
+
+-- Insert more exercises from CSV data (continuing from previous migration)
+INSERT INTO exercises (id, name, category, muscle_group, equipment, instructions, is_custom, video_url) VALUES
+(1311201, 'Bent knee Lying Twist (On Stability Ball)', 'Strength', 'Abs', 'Stability ball', 'Weight Reps', FALSE, 'https://vimeo.com/747950597'),
+(1321201, 'Bent knee Lying Twist', 'Strength', 'Abs', 'Body weight', 'Weight Reps', FALSE, 'https://vimeo.com/747950717'),
+(1361201, 'Boat Stretch (female)', 'Stretching', 'Abs', 'Body weight', 'Weight Reps', FALSE, 'https://vimeo.com/747950789'),
+(1371201, 'Body-Up', 'Strength', 'Chest, Triceps', 'Body weight', 'Weight Reps', FALSE, 'https://vimeo.com/747995829'),
+(1411201, 'Bridge - Mountain Climber (Cross Body) (female)', 'Strength', 'Abs', 'Body weight', 'Weight Reps', FALSE, 'https://vimeo.com/747950857'),
+(1461201, 'Butt Kicks (female)', 'Aerobic', 'Plyometrics', 'Body weight', 'Weight Reps', FALSE, 'https://vimeo.com/747901687'),
+(1471201, 'Bycicle Twisting Crunch', 'Strength', 'Abs', 'Body weight', 'Weight Reps', FALSE, 'https://vimeo.com/747950978'),
+(1491201, 'Cable Alternate Triceps Extension', 'Strength', 'Triceps', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747995738'),
+(1501201, 'Cable Bar Lateral Pulldown', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719324976'),
+(1511201, 'Cable Bench Press', 'Strength', 'Chest', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719335518'),
+(1531201, 'Cable Cross-over Lateral Pulldown', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/748249050'),
+(1541201, 'Cable Cross-over Revers Fly', 'Strength', 'Shoulders', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719338771'),
+(1561201, 'Cable Curl (female)', 'Strength', 'Biceps', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747992844'),
+(1581201, 'Cable Decline Fly', 'Strength', 'Chest', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719335536'),
+(1591201, 'Cable Decline Seated Wide-grip Row', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719325034'),
+(1611201, 'Cable Forward Raise', 'Strength', 'Shoulders', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719338784'),
+(1621201, 'Cable Front Raise', 'Strength', 'Shoulders', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719338793'),
+(1631201, 'Cable Front Seated Row', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719325070'),
+(1651201, 'Cable Hammer Curl (with rope) (male)', 'Strength', 'Biceps', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747941710'),
+(1661201, 'Cable Hammer Curl', 'Strength', 'Biceps', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747941740'),
+(1691201, 'Cable Incline Bench Press', 'Strength', 'Chest', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719335552'),
+(1701201, 'Cable Incline Fly (on stability ball)', 'Strength', 'Chest', 'Cable, Stability ball', 'Weight Reps', FALSE, 'https://vimeo.com/719335567'),
+(1711201, 'Cable Incline Fly', 'Strength', 'Chest', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719335589'),
+(1751201, 'Cable Kneeling Crunch', 'Strength', 'Abs', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747951068'),
+(1761201, 'Cable Kneeling Triceps Extension', 'Strength', 'Triceps', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747992883'),
+(1771201, 'Cable Lateral Pulldown (with rope attachment)', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719325156'),
+(1781201, 'Cable Lateral Raise', 'Strength', 'Shoulders', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719338816'),
+(1791201, 'Cable Low Fly', 'Strength', 'Chest', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/748277913'),
+(1801201, 'Cable Low Seated Row', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719325193'),
+(1831201, 'Cable Lying Curl (female)', 'Strength', 'Biceps', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747992925'),
+(1841201, 'Cable Lying Extension Pullover (with rope attachment)', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719326741'),
+(1851201, 'Cable Lying Fly', 'Strength', 'Chest', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719335608'),
+(1871201, 'Cable Lying Triceps Extension', 'Strength', 'Triceps', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747992963'),
+(1881201, 'Cable Middle Fly', 'Strength', 'Chest', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719335633'),
+(1891201, 'Cable One Arm Bent over Row', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719327078'),
+(1901201, 'Cable One Arm Curl', 'Strength', 'Biceps', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747992992'),
+(1921201, 'Cable One Arm Lateral Raise', 'Strength', 'Shoulders', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/749845502'),
+(1941201, 'Cable Overhead Triceps Extension (rope attachment)', 'Strength', 'Triceps', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747993035'),
+(1951201, 'Cable Preacher Curl', 'Strength', 'Biceps', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/747993084'),
+(1971201, 'Cable Pulldown (pro lat bar)', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719327121'),
+(1981201, 'Cable Pulldown', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719327006'),
+(1991201, 'Cable Pushdown (straight arm) (VERSION 2)', 'Strength', 'Back', 'Cable', 'Weight Reps', FALSE, 'https://vimeo.com/719327033');
+
+-- Add user interaction fields for exercise tracking
+ALTER TABLE exercises ADD COLUMN is_favourite BOOLEAN DEFAULT FALSE;
+ALTER TABLE exercises ADD COLUMN usage_count INTEGER DEFAULT 0;
+ALTER TABLE exercises ADD COLUMN last_used_at TIMESTAMP;
