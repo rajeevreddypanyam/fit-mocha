@@ -1,0 +1,80 @@
+Project Instructions for AI Agents: FlexTracker v2
+1. Project Overview
+
+Project Name: FlexTracker v2
+Purpose: A modern, responsive web application designed to help users track and manage their fitness workouts and exercise routines. It provides tools for logging workout sessions, managing a personal exercise library, and reviewing historical performance data.
+Deployment: The application is currently deployed and accessible at https://fit.mocha.app.
+Target Audience: Individuals seeking an intuitive and comprehensive digital tool for fitness tracking.
+2. Technology Stack
+
+FlexTracker v2 is built with a clear separation of concerns between its frontend user interface and its backend API, leveraging modern web technologies.
+
+Frontend:
+Framework: React (version 19.0.0) for building interactive user interfaces.
+Language: TypeScript (version 5.8.3) for type safety and improved developer experience.
+Styling: Tailwind CSS (version 3.4.17) for rapid and utility-first styling, enabling responsive and theme-aware designs.
+Build Tool: Vite (version 6.3.2) for a fast development server and optimized builds.
+Routing: react-router (version 7.5.3) for declarative navigation.
+State Management: React Context API (useSettings.tsx) for global settings, and local component state for other data.
+UI Components: lucide-react for icons, @dnd-kit for drag-and-drop functionality (exercise reordering).
+Charting: recharts for displaying historical data and statistics.
+Backend (API):
+Framework: Hono.js (version 4.7.7) for building fast, lightweight API routes.
+Database: SQLite (managed via Cloudflare D1, inferred from wrangler usage and c.env.DB bindings in src/worker), providing persistence for all application data (exercises, workouts, sets).
+Validation: @hono/zod-validator (version 0.5.0) and zod (version 3.24.3) for schema validation of API requests and responses.
+Project Structure & Tooling:
+Linting: ESLint (eslint.config.js, typescript-eslint) for maintaining code quality.
+Package Management: npm (package.json).
+3. Core Features & Functionalities
+
+The application provides the following key features:
+
+Workout Sessions:
+Active Workout Tracking: Users can start a new workout or resume an active one. The system tracks workout duration, exercises performed, and set details (weight, reps, notes).
+Rest Timer: An integrated rest timer with customizable default duration, sound, and vibration notifications assists users between sets.
+Workout Completion: Users can complete a workout, generating a summary including total volume, reps, sets, estimated calories, and intensity level.
+Workout Discard: Option to discard an active workout, removing it from history.
+Workout Editing (History): For completed workouts, users can edit the workout title, duration, intensity level, and overall notes.
+Exercise Management:
+Exercise Library: A comprehensive list of exercises with details such as muscle group, equipment, and instructions.
+Search & Filter: Users can efficiently find exercises using search, and filter by equipment and muscle group.
+Sorting: Exercises can be sorted by favorites, recently used, most used, and custom exercises.
+Custom Exercises: Ability to add, edit, and delete personal custom exercises.
+Exercise Details: View in-depth information about each exercise, including demonstration videos (if available), usage history, and personal records (PRs) such as heaviest lift, best 1RM, and session volume.
+Workout Structure & Flexibility:
+Adding Exercises to Workouts: Users can add multiple exercises to an active workout session.
+Exercise Reordering: Exercises within an active workout can be reordered using drag-and-drop.
+Set Management: For each exercise, users can add multiple sets, record weight/reps, and add specific notes per set. Sets can be edited, duplicated, or deleted.
+Exercise Replacement: Users can replace an exercise in a historical workout, with an option to preserve existing set data.
+Workout History & Analytics:
+Historical Overview: View a chronological history of all completed workouts, grouped by month.
+Detailed Summaries: Each historical workout can be viewed in detail, including all exercises and their respective sets.
+Progress Tracking: Exercise-specific statistics and charts (e.g., Reps Over Time, Volume Over Time) help users visualize their progress over various time periods.
+User Preferences & Profile:
+Units: Toggle between Imperial (lbs) and Metric (kg) measurement units.
+Theme: Switch between dark and light themes for the UI.
+Screen Lock: Option to keep the screen on during workouts.
+Rest Timer Settings: Configure automatic start, sound, and vibration for the rest timer.
+Profile Editor: Update personal details like name, bio, gender, and birthday.
+4. Architecture & Data Flow
+
+Frontend (React App): Located in src/react-app/. This is a Single Page Application (SPA) that renders the user interface.
+Components communicate with the backend via asynchronous API calls using the native fetch API.
+Client-side routing is managed by react-router.
+Global application settings are handled via React's Context API (SettingsContext in src/react-app/hooks/useSettings.tsx) and are persisted to the user's localStorage.
+Backend (Hono Worker): Located in src/worker/. This acts as a RESTful API.
+It exposes endpoints for managing exercises (/api/exercises) and workouts (/api/workouts), along with their associated nested resources like workout_exercises and workout_sets.
+All data operations (CRUD) are performed on a SQLite database.
+API requests are strictly validated against Zod schemas defined in src/shared/types.ts to ensure data integrity.
+Shared Types: src/shared/types.ts defines common TypeScript interfaces and Zod schemas that are shared and utilized by both the frontend and backend. This ensures type consistency and data structure alignment across the entire application.
+5. User Interface / User Experience (UI/UX)
+
+Responsive Design: The application is built with a mobile-first philosophy, ensuring an optimal and consistent user experience across a variety of device screen sizes.
+Theming: Features a user-configurable dark and light theme, with cyan-500 serving as the consistent primary accent color across both modes.
+Visual Hierarchy: The UI employs a layered design paradigm, utilizing Tailwind CSS's shadow utilities (shadow-2xl, shadow-lg, hover:shadow-xl) and backdrop-blur-lg effects. This creates a compelling sense of depth and guides user attention. Headers and footers exhibit prominent "floating" effects, while interactive cards and content containers possess appropriate elevation, contributing to clear content grouping and an enhanced interactive feel.
+6. Development Environment & Considerations
+
+Local Development: The project can be easily set up for local development by running npm install to resolve dependencies, followed by npm run dev to start the development server.
+Dependencies: All project dependencies and development tools are meticulously listed and managed within the package.json file.
+Data Models: The underlying database schema, defined by CREATE TABLE statements, clearly outlines the structure and relationships of the persistent data.
+This document serves as a comprehensive guide to understanding FlexTracker v2, detailing its architecture, features, and technical implementation for any AI agent seeking to analyze or interact with the project.
